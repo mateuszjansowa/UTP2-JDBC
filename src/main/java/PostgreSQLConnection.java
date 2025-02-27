@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class PostgreSQLConnection {
     private static final String URL = "jdbc:postgresql://localhost:5432/ksidb";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "-";
+    private static final String PASSWORD = "admin";
 
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
