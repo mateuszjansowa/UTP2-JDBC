@@ -14,7 +14,7 @@ public class ResultsMetadataExample {
         String query = "SELECT * FROM POZYCJE";
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+             Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(query);
         ) {
             ResultSetMetaData metaData = resultSet.getMetaData();
